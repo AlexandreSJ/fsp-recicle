@@ -1,0 +1,7 @@
+{
+  "name": "fsp-recicle",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
