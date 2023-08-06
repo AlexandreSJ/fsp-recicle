@@ -19,6 +19,14 @@
   </ion-header>
 
   <ion-content class="ion-padding">
-    <app-catador></app-catador>
+    <ng-container *ngIf="userType === '1'">
+      <app-catador></app-catador>
+    </ng-container>
+    <ng-container *ngIf="userType === '2'">
+      <app-reciclador></app-reciclador>
+    </ng-container>
+    <ng-container *ngIf="userType === '3'">
+      <app-centro-reciclagem></app-centro-reciclagem>
+    </ng-container>
   </ion-content>
 </div>
