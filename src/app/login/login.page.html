@@ -33,7 +33,7 @@
             <ion-input label="Senha" labelPlacement="floating" fill="outline" type="password" placeholder="Digite sua senha"></ion-input>
           </div>
           <div class="form-buttons">
-            <ion-button expand="block" href="/home">Entrar</ion-button>
+            <ion-button expand="block" (click)="login.dismiss()" [routerLink]="['/home']">Entrar</ion-button>
           </div>
         </form>
 
@@ -53,12 +53,15 @@
           </ion-buttons>
         </ion-toolbar>
         
-        <ion-segment value="heart">
-          <ion-segment-button value="call">Reciclador
+        <ion-segment value="{{register}}">
+          <ion-segment-button value="reciclador">
+            Reciclador
           </ion-segment-button>
-          <ion-segment-button value="heart">Catador
+          <ion-segment-button value="catador">
+            Catador
           </ion-segment-button>
-          <ion-segment-button value="pin">Centro
+          <ion-segment-button value="centro">
+            Centro
           </ion-segment-button>
         </ion-segment>
 
