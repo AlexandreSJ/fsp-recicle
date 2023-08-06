@@ -1,16 +1,62 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-button expand="block" href="/home">Entrar</ion-button>
-  
+  <div>
+
+    <ion-avatar>
+      <img alt="Logo" src="../../assets/icon/favicon.png" />
+    </ion-avatar>
+    <div>
+      <h1>FSP - Recicle</h1>
+    </div>
+
+  </div>
+
+  <ion-button expand="block" id="log-in">Entrar</ion-button>
+  <ion-button expand="block" id="sign-in">Registrar</ion-button>
+  <ion-modal #login trigger="log-in">
+
+    <ng-template>
+      <ion-content class="ion-padding">
+        <ion-toolbar>
+          <ion-title>Entrar</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="login.dismiss()"> <ion-icon name="arrow-back-outline"></ion-icon> </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+
+        <form>
+          <div class="form">
+            <ion-input label="E-mail" labelPlacement="floating" fill="outline" type="email" placeholder="Digite seu email"></ion-input>
+            <ion-input label="Senha" labelPlacement="floating" fill="outline" type="password" placeholder="Digite sua senha"></ion-input>
+          </div>
+          <ion-button expand="block" href="/home">Entrar</ion-button>
+        </form>
+
+      </ion-content>
+    </ng-template>
+
+  </ion-modal>
+  <ion-modal #signin trigger="sign-in">
+
+    <ng-template>
+      <ion-content class="ion-padding">
+        <ion-toolbar>
+          <ion-title>Entrar</ion-title>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="signin.dismiss()"> <ion-icon name="arrow-back-outline"></ion-icon> </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+
+        <form>
+          <div class="form">
+            <ion-input label="E-mail" labelPlacement="floating" fill="outline" type="email" placeholder="Digite seu email"></ion-input>
+            <ion-input label="Senha" labelPlacement="floating" fill="outline" type="password" placeholder="Digite sua senha"></ion-input>
+          </div>
+          <ion-button expand="block" href="/home">Entrar</ion-button>
+        </form>
+
+      </ion-content>
+    </ng-template>
+
+  </ion-modal>
 </ion-content>
