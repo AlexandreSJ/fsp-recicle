@@ -2,14 +2,14 @@
   <ion-toolbar>
     <ion-title>Localização</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="backHome()">Cancelar</ion-button>
+      <ion-button color="danger" (click)="backHome()"> <ion-icon name="close"></ion-icon> </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <img src="../../../assets/icon/Localização mapa.png" alt="" />
-  <ion-button expand="block" (click)="backHome()"
-    >Confirmar localização</ion-button
-  >
+  <ion-button expand="block" (click)="backHome()">
+    Confirmar localização
+  </ion-button>
 </ion-content>
