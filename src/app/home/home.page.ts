@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  userType!: string;
 
   constructor() {}
 
+  ngOnInit() {
+    this.userType = '1';
+  }
 }

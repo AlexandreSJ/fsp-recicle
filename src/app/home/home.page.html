@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,12 +10,16 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  
-  <ion-button expand="block" href="/login">Entrar</ion-button>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ng-container *ngIf="userType === '1'">
+      <app-catador></app-catador>
+    </ng-container>
+    <ng-container *ngIf="userType === '2'">
+      <app-reciclador></app-reciclador>
+    </ng-container>
+    <ng-container *ngIf="userType === '3'">
+      <app-centro-reciclagem></app-centro-reciclagem>
+    </ng-container>
   </div>
 </ion-content>

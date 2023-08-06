@@ -5,15 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { CatadorComponent } from '../catador/catador.component';
+import { RecicladorComponent } from '../reciclador/reciclador.component';
+import { CentroReciclagemComponent } from '../centro-reciclagem/centro-reciclagem.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    HomePageRoutingModule
+  imports: [CommonModule, FormsModule, IonicModule, HomePageRoutingModule],
+  declarations: [
+    HomePage,
+    CatadorComponent,
+    RecicladorComponent,
+    CentroReciclagemComponent,
   ],
-  declarations: [HomePage]
 })
 export class HomePageModule {}
