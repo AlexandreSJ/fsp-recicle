@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true" class="ion-padding">
 
-  <div>
+  <div class="content">
 
     <ion-avatar>
       <img alt="Logo" src="../../assets/icon/favicon.png" />
@@ -11,52 +11,71 @@
 
   </div>
 
-  <ion-button expand="block" id="log-in">Entrar</ion-button>
-  <ion-button expand="block" id="sign-in">Registrar</ion-button>
-  <ion-modal #login trigger="log-in">
+  <div class="button-container">
+    <ion-button expand="block" id="log-in">Entrar</ion-button>
+    <ion-button expand="block" fill="outline" id="sign-in">Registrar</ion-button>
+  </div>
+
+  <ion-modal #login trigger="log-in" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
 
     <ng-template>
       <ion-content class="ion-padding">
         <ion-toolbar>
           <ion-title>Entrar</ion-title>
           <ion-buttons slot="end">
-            <ion-button color="danger" (click)="login.dismiss()"> <ion-icon name="arrow-back-outline"></ion-icon> </ion-button>
+            <ion-button color="danger" (click)="login.dismiss()"> <ion-icon name="close"></ion-icon> </ion-button>
           </ion-buttons>
         </ion-toolbar>
 
         <form>
-          <div class="form">
+          <div class="form-content">
             <ion-input label="E-mail" labelPlacement="floating" fill="outline" type="email" placeholder="Digite seu email"></ion-input>
             <ion-input label="Senha" labelPlacement="floating" fill="outline" type="password" placeholder="Digite sua senha"></ion-input>
           </div>
-          <ion-button expand="block" href="/home">Entrar</ion-button>
+          <div class="form-buttons">
+            <ion-button expand="block" href="/home">Entrar</ion-button>
+          </div>
         </form>
 
       </ion-content>
     </ng-template>
 
   </ion-modal>
-  <ion-modal #signin trigger="sign-in">
+
+  <ion-modal #signin trigger="sign-in" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
 
     <ng-template>
       <ion-content class="ion-padding">
         <ion-toolbar>
-          <ion-title>Entrar</ion-title>
+          <ion-title>Registrar</ion-title>
           <ion-buttons slot="end">
-            <ion-button color="danger" (click)="signin.dismiss()"> <ion-icon name="arrow-back-outline"></ion-icon> </ion-button>
+            <ion-button color="danger" (click)="signin.dismiss()"> <ion-icon name="close"></ion-icon> </ion-button>
           </ion-buttons>
         </ion-toolbar>
+        
+        <ion-segment value="heart">
+          <ion-segment-button value="call">Reciclador
+          </ion-segment-button>
+          <ion-segment-button value="heart">Catador
+          </ion-segment-button>
+          <ion-segment-button value="pin">Centro
+          </ion-segment-button>
+        </ion-segment>
 
         <form>
-          <div class="form">
+          <div class="form-content">
             <ion-input label="E-mail" labelPlacement="floating" fill="outline" type="email" placeholder="Digite seu email"></ion-input>
             <ion-input label="Senha" labelPlacement="floating" fill="outline" type="password" placeholder="Digite sua senha"></ion-input>
+            <ion-input label="Confirmar Senha" labelPlacement="floating" fill="outline" type="password" placeholder="Confirme sua senha"></ion-input>
           </div>
-          <ion-button expand="block" href="/home">Entrar</ion-button>
+          <div class="form-buttons">
+            <ion-button expand="block" (click)="signin.dismiss()">Registrar</ion-button>
+          </div>
         </form>
 
       </ion-content>
     </ng-template>
 
   </ion-modal>
+
 </ion-content>
