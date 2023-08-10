@@ -16,7 +16,7 @@ export class RecicladorComponent implements OnInit {
   async pullMap() {
     this.modal = await this.modalController.create({
       component: LocalizacaoComponent,
-      cssClass: 'custom-modal',
+      // cssClass: 'custom-modal',
     });
     await this.modal.present();
   }
