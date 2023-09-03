@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
   userType!: string;
-  username!: string;
+  userName!: string;
 
   constructor() {}
 
   ngOnInit() {
-    this.userType = '2';
-    this.username = 'Miguel';
+    this.userType = '1';
+    this.userName = 'Miguel';
   }
 }
