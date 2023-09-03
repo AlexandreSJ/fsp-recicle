@@ -27,13 +27,13 @@
           </ion-buttons>
         </ion-toolbar>
 
-        <form>
+        <form (submit)="onSubmit()">
           <div class="form-content">
-            <ion-input label="E-mail" labelPlacement="floating" fill="outline" type="email" placeholder="Digite seu email"></ion-input>
-            <ion-input label="Senha" labelPlacement="floating" fill="outline" type="password" placeholder="Digite sua senha"></ion-input>
+            <ion-input label="E-mail" [(ngModel)]="email" name="email" labelPlacement="floating" fill="outline" type="email" placeholder="Digite seu email"></ion-input>
+            <ion-input label="Senha" [(ngModel)]="password" name="password" labelPlacement="floating" fill="outline" type="password" placeholder="Digite sua senha"></ion-input>
           </div>
           <div class="form-buttons">
-            <ion-button expand="block" (click)="login.dismiss()" [routerLink]="['/home']">Entrar</ion-button>
+            <ion-button type="submit" expand="block" (click)="login.dismiss()">Entrar</ion-button>
           </div>
         </form>
 
@@ -52,7 +52,7 @@
             <ion-button color="danger" (click)="signin.dismiss()"> <ion-icon name="close"></ion-icon> </ion-button>
           </ion-buttons>
         </ion-toolbar>
-        
+
         <ion-segment value="{{register}}">
           <ion-segment-button value="reciclador">
             Reciclador

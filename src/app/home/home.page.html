@@ -5,7 +5,9 @@
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding">
-    <ion-button color="danger" expand="block" [routerLink]="['/login']"><ion-icon name="log-out-sharp"></ion-icon> SAIR</ion-button>
+    <ion-button color="danger" expand="block" [routerLink]="['/login']"
+      ><ion-icon name="log-out-sharp"></ion-icon> SAIR</ion-button
+    >
   </ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
@@ -19,13 +21,13 @@
   </ion-header>
 
   <ion-content class="ion-padding">
-    <ng-container *ngIf="userType === '1'">
+    <ng-container *ngIf="email === 'email1@gmail.com'">
       <app-reciclador></app-reciclador>
     </ng-container>
-    <ng-container *ngIf="userType === '2'">
+    <ng-container *ngIf="email === 'email2@gmail.com'">
       <app-catador></app-catador>
     </ng-container>
-    <ng-container *ngIf="userType === '3'">
+    <ng-container *ngIf="email === 'email3@gmail.com'">
       <app-centro-reciclagem></app-centro-reciclagem>
     </ng-container>
   </ion-content>
