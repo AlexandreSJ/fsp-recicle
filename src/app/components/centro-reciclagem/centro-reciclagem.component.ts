@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { LocalizacaoComponent } from '../localizacao/localizacao.component';
 
 @Component({
   selector: 'app-centro-reciclagem',
@@ -6,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./centro-reciclagem.component.scss'],
 })
 export class CentroReciclagemComponent  implements OnInit {
-
-  constructor() { }
+  modal!: HTMLIonModalElement;
+  constructor(public modalController: ModalController) {}
 
   ngOnInit() {}
+
+  async pullMap() {
+    this.modal = await this.modalController.create({
+      component: LocalizacaoComponent,
+      // cssClass: 'custom-modal',
+    });
+    await this.modal.present();
+  }
 
 }

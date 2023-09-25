@@ -9,53 +9,14 @@
   </ion-toolbar>
 </ion-header>
 
-<img
-  src="../../../assets/icon/chamarcatadorproximo.png"
-  alt=""
-  style="width: 100%"
-/>
-<ion-content class="ion-padding">
-  <ion-searchbar placeholder="Search"></ion-searchbar>
-  <ion-list>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://i.pravatar.cc/300?u=b"></ion-img>
-      </ion-avatar>
-      <ion-label>
-        <h2>Connor Smith</h2>
-        <p>Sales Rep</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://i.pravatar.cc/300?u=a"></ion-img>
-      </ion-avatar>
-      <ion-label>
-        <h2>Daniel Smith</h2>
-        <p>Product Designer</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://i.pravatar.cc/300?u=d"></ion-img>
-      </ion-avatar>
-      <ion-label>
-        <h2>Greg Smith</h2>
-        <p>Director of Operations</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-avatar slot="start">
-        <ion-img src="https://i.pravatar.cc/300?u=e"></ion-img>
-      </ion-avatar>
-      <ion-label>
-        <h2>Zoey Smith</h2>
-        <p>CEO</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+<ion-content class="ion-padding" style="height: 100%;">
+  <div class="form-content">
+    <img src="../../../assets/icon/chamarcatadorproximo.png" alt="" style="width: 100%; height: 100%;" />
+  </div>
+</ion-content>
 
-  <ion-button expand="block" (click)="backHome()">
+<ion-footer slot="end">
+  <ion-button type="submit" expand="block" (click)="backHome()">
     Chamar catador mais próximo
   </ion-button>
-</ion-content>
+</ion-footer>

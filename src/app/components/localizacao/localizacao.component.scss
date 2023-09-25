@@ -1,0 +1,26 @@
+.button-container {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    width: calc(100% - 32px);
+    bottom: 10%;
+    ion-button {
+        width: 50%;
+    }
+}
+
+.form-content {
+    max-height: 100%;
+    overflow: auto;
+}
+
+.form-buttons {
+    ion-button {
+        width: 100%;
+    }
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    width: calc(100% - 32px);
+    bottom: 10%;
+}

@@ -1,4 +1,5 @@
 <ion-content class="ion-padding">
+  <ion-title>Catador</ion-title>
   <ion-button expand="block" id="open-modal">Procurar recicladores</ion-button>
 
   <ion-modal #modal trigger="open-modal" class="modalSearch">
@@ -14,10 +15,7 @@
         </ion-toolbar>
       </ion-header>
       <ion-content>
-        <ion-searchbar
-          placeholder="Search"
-          (click)="modal.setCurrentBreakpoint(0.75)"
-        ></ion-searchbar>
+        <ion-progress-bar type="indeterminate" color="primary"></ion-progress-bar>
         <ion-list>
           <ion-item>
             <ion-avatar slot="start">
@@ -27,6 +25,7 @@
               <h2>Connor Smith</h2>
               <p>Sales Rep</p>
             </ion-label>
+            <ion-button><ion-icon name="search-outline"></ion-icon></ion-button>
           </ion-item>
           <ion-item>
             <ion-avatar slot="start">
@@ -36,6 +35,7 @@
               <h2>Daniel Smith</h2>
               <p>Product Designer</p>
             </ion-label>
+            <ion-button><ion-icon name="search-outline"></ion-icon></ion-button>
           </ion-item>
           <ion-item>
             <ion-avatar slot="start">
@@ -45,6 +45,7 @@
               <h2>Greg Smith</h2>
               <p>Director of Operations</p>
             </ion-label>
+            <ion-button><ion-icon name="search-outline"></ion-icon></ion-button>
           </ion-item>
           <ion-item>
             <ion-avatar slot="start">
@@ -54,6 +55,7 @@
               <h2>Zoey Smith</h2>
               <p>CEO</p>
             </ion-label>
+            <ion-button><ion-icon name="search-outline"></ion-icon></ion-button>
           </ion-item>
         </ion-list>
       </ion-content>

@@ -27,13 +27,13 @@
           </ion-buttons>
         </ion-toolbar>
 
-        <form (submit)="onSubmit()">
+        <form (submit)="onSubmit();login.dismiss()">
           <div class="form-content">
             <ion-input label="E-mail" [(ngModel)]="email" name="email" labelPlacement="floating" fill="outline" type="email" placeholder="Digite seu email"></ion-input>
             <ion-input label="Senha" [(ngModel)]="password" name="password" labelPlacement="floating" fill="outline" type="password" placeholder="Digite sua senha"></ion-input>
           </div>
           <div class="form-buttons">
-            <ion-button type="submit" expand="block" (click)="login.dismiss()">Entrar</ion-button>
+            <ion-button type="submit" expand="block">Entrar</ion-button>
           </div>
         </form>
 
@@ -53,7 +53,7 @@
           </ion-buttons>
         </ion-toolbar>
 
-        <ion-segment value="{{register}}">
+        <ion-segment [scrollable]="true" value="{{register}}">
           <ion-segment-button value="reciclador">
             Reciclador
           </ion-segment-button>
@@ -61,18 +61,18 @@
             Catador
           </ion-segment-button>
           <ion-segment-button value="centro">
-            Centro
+            Centro de Reciclagem
           </ion-segment-button>
         </ion-segment>
 
-        <form>
+        <form (submit)="onRegister();signin.dismiss()">
           <div class="form-content">
             <ion-input label="E-mail" labelPlacement="floating" fill="outline" type="email" placeholder="Digite seu email"></ion-input>
             <ion-input label="Senha" labelPlacement="floating" fill="outline" type="password" placeholder="Digite sua senha"></ion-input>
             <ion-input label="Confirmar Senha" labelPlacement="floating" fill="outline" type="password" placeholder="Confirme sua senha"></ion-input>
           </div>
           <div class="form-buttons">
-            <ion-button expand="block" (click)="signin.dismiss()">Registrar</ion-button>
+            <ion-button type="submit" expand="block">Registrar</ion-button>
           </div>
         </form>
 

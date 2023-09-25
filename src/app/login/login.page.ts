@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -17,6 +18,17 @@ export class LoginPage implements OnInit {
     this.register = 'reciclador';
   }
 
+  onRegister() {
+    Swal.fire({
+      heightAuto: false,
+      icon: 'success',
+      title: 'Registo finalizado como '+this.register,
+      showConfirmButton: false,
+      timer: 1800,
+      allowOutsideClick: false
+    })
+  }
+
   onSubmit() {
     let validEmails = new Map<string, boolean>([
       ['email1@gmail.com', true],
@@ -27,8 +39,24 @@ export class LoginPage implements OnInit {
 
     const isValid = validEmails.get(this.email);
     if (!isValid) {
-      alert('email inválido');
+      Swal.fire({
+        heightAuto: false,
+        icon: 'error',
+        title: 'Login inválido',
+        showConfirmButton: false,
+        timer: 1800,
+        timerProgressBar: true
+      })
       return;
+    }else{
+      Swal.fire({
+        heightAuto: false,
+        icon: 'success',
+        title: 'Login inválido',
+        showConfirmButton: false,
+        timer: 1800,
+        allowOutsideClick: false
+      })
     }
 
     this.router.navigate(['/home'], {

@@ -33,12 +33,8 @@ ion-segment-button {
     font-size: 10px;
 }
 
-// .form-content {}
-
-.form-buttons {
-    ion-button {
-        width: 100%;
-    }
+ion-segment{
+    overflow: hidden;
 }
 
 .button-container {
@@ -53,6 +49,9 @@ ion-segment-button {
 }
 
 .form-buttons {
+    ion-button {
+        width: 100%;
+    }
     display: flex;
     flex-direction: row-reverse;
     position: absolute;
